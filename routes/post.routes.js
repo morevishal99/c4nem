@@ -36,8 +36,9 @@ postRoute.get("/", async (req, res) => {
 })
 
 postRoute.patch("/update/:id", async (req, res) => {
+    const paylaod=req.body
     try {
-        const post = await postModel.findByIdAndUpdate({ "userid": req.params.userid })
+        const post = await postModel.findByIdAndUpdate({ "userid": req.params.userid },paylaod)
         res.status(200).send(post)
     } catch (error) {
         res.status(400).send({ "msg": error.message })
