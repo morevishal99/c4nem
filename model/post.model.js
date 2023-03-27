@@ -5,6 +5,7 @@ const postSchema = mongoose.Schema({
     body: String,
     device: String,
     no_of_comments: Number,
+    userid:String
 }, { versionKey: false })
 
 const postModel = mongoose.model("userpost", postSchema)

@@ -19,9 +19,10 @@ postRoute.post("/add", async (req, res) => {
 
 
 // route for getting post
-postRoute.get("/", async (req, res) => {
-    const token = req.headers.authorization
+postRoute.get("/get", async (req, res) => {
+    const token=req.headers.authorization.split(" ")[1]
     const decoded = jwt.verify(token, "vishal")
+    console.log('decoded: ', decoded);
 
     try {
         if (decoded) {

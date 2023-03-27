@@ -12,8 +12,8 @@ app.get("/users", (req, res) => {
     res.send("home")
 })
 app.use("/users", userRoute)
-app.use(Authentication)
-app.use("/post", postRoute)
+// app.use(Authentication)
+app.use("/post", postRoute)  
 
 app.listen(8080, async () => {
 

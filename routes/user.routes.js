@@ -10,9 +10,10 @@ userRoute.post("/register", (req, res) => {
 
     try {
         const user = userModel.find({ email })
+        console.log(user)
         if(user.length>=1){
             res.status(400).send({ "msg": "User already exist, please login" })
-            return;
+            // return;
         }
         else{
             
