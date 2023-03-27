@@ -3,6 +3,8 @@ const { connection } = require("./db")
 const { userRoute } = require("./routes/user.routes")
 const { postRoute } = require("./routes/post.routes")
 const { Authentication} = require("./middleware/Authentication")
+const cors=require("cors")
+app.use(cors())
 const app = express()
 
 app.use(express.json())
