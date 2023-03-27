@@ -4,8 +4,8 @@ const { userRoute } = require("./routes/user.routes")
 const { postRoute } = require("./routes/post.routes")
 const { Authentication} = require("./middleware/Authentication")
 const cors=require("cors")
-app.use(cors())
 const app = express()
+app.use(cors())
 
 app.use(express.json())
 app.get("/users", (req, res) => {
